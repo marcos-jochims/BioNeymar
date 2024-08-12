@@ -1,0 +1,214 @@
+*{
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+}
+:root{
+  --segunda-secao:'Montserrat', sans-serif;
+  --primeira-secao: 'Ysabeau Infant', sans-serif;
+
+  --textos: #fff;
+  --textos-tabela:#ffffffcc;
+  --sombra-titulo: #000000;
+  --sombra-subtitulo: #000000cc;
+  --tranparencia: #0200006e;
+  --borda-amarela:#ffdf00;
+  --borda-verde: #009c3b;
+}
+
+.container-video {
+	width: 100%;
+	height: 100vh;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+}
+
+.container-video video{
+	position: absolute;
+	z-index: -1;
+	width: 100%;
+	height: 100%;
+	object-fit: cover;
+}
+
+.container-info{
+	width: 768px;
+	padding: 0 20px;
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: space-evenly;
+	gap: 10px;
+}
+
+.container-titulo{
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	gap: 20px;
+}
+
+ .container-imagem{
+	width: 200px;
+	height: 200px;
+	border-radius: 100%;
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	background-image: url(../assets/neymar.jpg);
+	background-position: center;
+	background-size: cover;
+} 
+
+.container-imagem::before{
+	content: "";
+	width: 215px;
+	height: 215px;
+	position: absolute;
+	background: linear-gradient(90deg, var(--borda-amarela) , var(--borda-verde));
+	border-radius: 100%;
+	z-index: -1;
+}
+
+.container-imagem img{
+	width: 100%;
+	height: 100%;
+	border-radius: 100%;
+}
+
+.container-titulo h1{
+	position: relative;
+	font-size: 70px;
+	color: var(--textos);
+	font-family: var(--primeira-secao);
+	text-shadow: 2px 6px 3px var(--sombra-titulo);
+	
+}
+.container-titulo{
+	width: auto;
+	height: auto;
+	
+}
+
+.container-titulo h1::before{
+	content: "";
+	width: 55px;
+	height: 5px;
+	position: absolute;
+	background: linear-gradient(90deg, var(--borda-amarela) , var(--borda-verde));
+	left: 5px;
+	bottom: 2px;
+	border-radius: 4px;
+}
+
+.container-titulo h1::after{
+	content: url(../assets/verificado.png);
+	margin-left: 5px;
+}
+
+.container-links{
+  max-width: 768px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  flex-direction: column;
+  gap: 10px;
+  margin: 0 auto;
+  padding-bottom: 20px;
+	
+}
+
+.container-links a{
+  width: 100%;
+  padding: 10px;
+
+  display: flex;
+  align-items: center;
+  gap: 5px;
+
+  font-family: var(--primeira-secao);
+  font-size: 20px;
+  font-weight: 600;
+  text-decoration: none;
+  text-align: center;
+
+  border-radius: 20px;
+  background-color: var(--tranparencia);
+  color: var(--textos);
+}
+
+.container-links a:hover {
+  background-color: var(--textos-tabela);
+  color: var(--sombra-titulo);
+}
+
+.container-links a p {
+  width: 90%;
+}
+
+.container-links img{
+	width: 30px;
+}
+
+.container-foto-fundo{
+	position: relative;
+	width: 100%;
+	height: 100vh;
+	text-align: center;
+
+	font-family: var(--segunda-secao);
+	color: var(--textos);
+	display: flex;
+	align-items: center;
+	flex-direction: column;
+	justify-content: center;
+	gap: 40px;
+
+	background-image: url(../assets/imagem-de-fundo.jpg);
+	background-size: cover;
+	background-position: center;
+	background-attachment: fixed;
+	
+}
+
+.container-foto-fundo h2{
+	font-size: 70px;
+	letter-spacing: 5px;
+	text-shadow: 3px 6px 1px var(--sombra-subtitulo);
+}
+
+.tabela th{
+	font-size: 26px;
+	background-color: var(--sombra-subtitulo);
+	color: var(--textos);
+	text-shadow: 2px 2px 1px var(--sombra-titulo);
+}
+
+.tabela th, tr, td{
+	padding: 15px;
+}
+
+.tabela tbody td:nth-child(1){
+	display: flex;
+	align-items: center;
+	gap: 10px;
+}
+
+.tabela tbody tr:nth-of-type(odd){
+	background-color: var(--textos-tabela);
+	font-weight: 700;
+	font-size: 18px;
+	color: var(--sombra-titulo);
+}
+
+.tabela tbody tr:nth-of-type(even){
+	background-color: var(--sombra-subtitulo);
+	font-weight: 700;
+	font-size: 18px;
+	color: var(--textos);
+}
+
+.tabela td img{
+	width: 30px;
+}
